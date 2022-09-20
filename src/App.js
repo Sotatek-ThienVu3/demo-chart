@@ -1,6 +1,6 @@
 import "./App.css";
 import ChartLine from "./chartLine";
-import RadarChart from "./data";
+import RadarChart from "./radarChart";
 
 function App() {
   return (
