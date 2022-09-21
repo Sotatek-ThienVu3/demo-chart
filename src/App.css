@@ -7,6 +7,12 @@
 
 .boxChart{
   width: 45%;
+  margin-bottom: 30px;
+}
+
+.chart{
+  background-color: #f7f7f7;
+  padding: 20px;
 }
 
 

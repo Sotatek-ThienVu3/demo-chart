@@ -7,6 +7,7 @@ import {
   Filler,
   Tooltip,
   Legend,
+  Title,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 
@@ -14,16 +15,27 @@ ChartJS.register(
   RadialLinearScale,
   PointElement,
   LineElement,
+  Title,
   Filler,
   Tooltip,
   Legend
 );
 
+export const options = {
+  responsive: true,
+  plugins: {
+    title: {
+      display: true,
+      text: "Distribution in % of world population",
+    },
+  },
+};
+
 export const data = {
   labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
   datasets: [
     {
-      label: "2000",
+      label: "1900",
       fill: true,
       backgroundColor: "rgba(255,99,132,0.3)",
       borderColor: "rgba(255,99,132,1)",
@@ -32,7 +44,7 @@ export const data = {
       data: [8.77, 55.61, 21.69, 36.62, 6.82],
     },
     {
-      label: "2010",
+      label: "1950",
       fill: true,
       backgroundColor: "rgba(177, 68, 147,0.2)",
       borderColor: "rgb(177, 68, 147)",
@@ -42,7 +54,7 @@ export const data = {
       data: [55.48, 54.16, 7.61, 8.06, 4.45],
     },
     {
-      label: "2020",
+      label: "2050",
       fill: true,
       backgroundColor: "rgba(69, 255, 147,0.2)",
       borderColor: "rgb(69, 255, 147)",
@@ -55,5 +67,5 @@ export const data = {
 };
 
 export default function RadarChart() {
-  return <Radar data={data} />;
+  return <Radar options={options} data={data} />;
 }

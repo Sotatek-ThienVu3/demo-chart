@@ -7,11 +7,15 @@ function App() {
     <div className="App">
       <div className="boxChart">
         <h3>Line Chart</h3>
-        <ChartLine />
+        <div className="chart">
+          <ChartLine />
+        </div>
       </div>
       <div className="boxChart">
         <h3>Radar Chart</h3>
-        <RadarChart />
+        <div className="chart">
+          <RadarChart />
+        </div>
       </div>
     </div>
   );
